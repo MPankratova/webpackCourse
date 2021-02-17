@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./src/main.js"></script>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+    <div class="tab">
+        <button class="tablinks" id="datecalcSelect">datecalc</button>
+        <button class="tablinks" id="timerSelect">timer</button>
+        <button class="tablinks" id="stopwatchSelect">stopwatch</button>
+    </div>
+
+    <form id="datecalc" class="tabcontent" name="datecalcSelect">
+        <h3>Калькулятор дат</h3>
+        <label>
+            <strong>Первая дата:</strong>
+            <input type="date" name="firstDate" />
+        </label>
+        <label>
+            <strong>Вторая дата:</strong>
+            <input type="date" name="secondDate" />
+        </label>
+        <button type="submit">Расчитать промежуток</button>
+        <p id="datecalc__result"></p>
+    </form>
+
+    <form id="timer" class="tabcontent" name="timerSelect">
+        <h3>Таймер</h3>
+        <label>
+            <strong>Время в минутах</strong>
+            <input type="text" id="time"/>
+            <button id='buttonStart'>Start</button>
+            <button id='buttonStop'>Stop</button>
+            <audio id="audio" src="./src/alarm.mp3"></audio>
+        </label>
+        <p id='timeLeft'></p>
+    </form>
+
+    <form id="stopwatch" class="tabcontent" name="stopwatchSelect">
+        <h3>Секундомер</h3>
+
+    </form>
+
+</body>
+</html>
